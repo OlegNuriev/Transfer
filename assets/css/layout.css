@@ -1,0 +1,6 @@
+/* 🔹 Хедер и футер */
+.fixed-header { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--secondary-color); color: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+.header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.contacts a { margin-left: 10px; }
+.main-content { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+.footer { text-align: center; padding: 20px; background-color: var(--secondary-color); color: white; margin-top: 40px; }

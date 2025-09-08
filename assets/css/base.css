@@ -1,0 +1,23 @@
+/* 🔹 Базовые стили */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --primary-color: #2563eb;      /* Синий */
+    --secondary-color: #1e3a8a;    /* Тёмно-синий */
+    --text-color: #333;            /* Цвет текста */
+    --bg-gradient: linear-gradient(180deg, #ffffff 0%, #cce7ff 100%); /* Белый -> голубой */
+    --border-radius: 12px;         /* ← ДОБАВИТЬ ЭТУ ПЕРЕМЕННУЮ */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+
+    /* Фон: градиент + облака */
+    background: var(--bg-gradient), url("https://www.transparenttextures.com/patterns/clouds.png");
+    background-attachment: fixed;
+    background-size: cover;
+
+    padding-top: 80px; /* Отступ для хедера */
+}
