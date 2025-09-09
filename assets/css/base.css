@@ -6,13 +6,16 @@
     --secondary-color: #1e3a8a;    /* Тёмно-синий */
     --text-color: #333;            /* Цвет текста */
     --bg-gradient: linear-gradient(180deg, #ffffff 0%, #cce7ff 100%); /* Белый -> голубой */
-    --border-radius: 12px;         /* ← ДОБАВИТЬ ЭТУ ПЕРЕМЕННУЮ */
+    --border-radius: 12px;
+    --font-heading: 'Playfair Display', serif; /* Для заголовков */
+    --font-body: 'Roboto', sans-serif; /* Для основного текста */
 }
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    font-family: var(--font-body); /* Применяем шрифт для всего тела */
 
     /* Фон: градиент + облака */
     background: var(--bg-gradient), url("https://www.transparenttextures.com/patterns/clouds.png");
@@ -20,4 +23,10 @@ body {
     background-size: cover;
 
     padding-top: 80px; /* Отступ для хедера */
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700; /* Playfair Display Bold */
 }
