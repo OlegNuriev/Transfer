@@ -20,9 +20,7 @@ body {
     /* Фон: градиент + облака */
     background: var(--bg-gradient), url("https://www.transparenttextures.com/patterns/clouds.png");
     background-attachment: fixed;
-    background-size: cover;
-
-    padding-top: 80px; /* Отступ для хедера */
+    background-size: cover;  
 }
 
 /* Стили для заголовков */

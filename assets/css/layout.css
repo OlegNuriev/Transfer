@@ -16,7 +16,7 @@
 }
 .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .contacts a { margin-left: 10px; }
-.main-content { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+.main-content { max-width: 1200px; margin: 0 auto; padding: 20px 20px; }
 /*.footer { text-align: center; padding: 20px; background-color: var(--secondary-color); color: white; margin-top: 20px; }*/
 .footer {
     text-align: center;
@@ -26,5 +26,5 @@
     background-size: cover;
     background-position: center;
     color: white;
-    margin-top: 40px;
+    /*margin-top: 5px;*/
 }

@@ -296,9 +296,7 @@
     .header-content { flex-direction: column; text-align: center; } 
     .contacts { margin-top: 10px; } 
     .gallery-grid { grid-template-columns: repeat(3, 1fr); } 
-    .content-block:first-child {
-    margin-top: 80px; /* или padding-top, в зависимости от структуры */
-  }
+    
 }
 @media (max-width: 480px) { 
     .gallery-grid { grid-template-columns: repeat(2, 1fr); } 
