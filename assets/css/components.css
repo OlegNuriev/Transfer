@@ -149,9 +149,14 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
-    background: var(--primary-color); 
+    /*background: var(--primary-color); */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+        0 0 25px rgba(37, 99, 235, 0.4);
     text-decoration: none;
     cursor: pointer;
     border: none;
