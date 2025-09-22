@@ -20,11 +20,41 @@
 /*.footer { text-align: center; padding: 20px; background-color: var(--secondary-color); color: white; margin-top: 20px; }*/
 .footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
     background: linear-gradient(rgba(53,92,125,0.6), rgba(192,108,132,0.3)), 
                 url('../images/sochi/МорпортЗакат.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     /*margin-top: 5px;*/
+}
+ /*🔹 Адаптивный хедер для мобильных */
+@media (max-width: 768px) {
+  .fixed-header {
+    padding: 8px 0; 
+  }
+
+  .header-content h1 {
+    font-size: 1.4rem; 
+  }
+
+  .msg-btn {
+    padding: 8px 14px;  
+    font-size: 0.85rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-header {
+    padding: 6px 0; 
+  }
+
+  .header-content h1 {
+    font-size: 1.1rem;
+  }
+
+  .msg-btn {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
 }

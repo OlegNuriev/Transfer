@@ -24,15 +24,23 @@
 .features li:nth-child(3) { transition-delay: 0.3s; }
 .features li:nth-child(4) { transition-delay: 0.4s; }
 .features li:nth-child(5) { transition-delay: 0.5s; }
-.block-title { 
-    text-align: center; 
-    padding: 20px; 
-    background-color: var(--primary-color); 
-    color: white; 
-    font-size: 1.8rem; 
-    font-family: var(--font-heading); /* Явно назначаем шрифт заголовка */
-    font-size: 2.2rem; /* Чуть больше для акцента */
+
+/* Заголовок блока */
+.block-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2.2rem;
+    font-family: var(--font-heading);
+    gap: 15px;
+    flex-wrap: wrap;
 }
+
+/* Контент блока */
 .block-content { 
     display: flex; 
     padding: 20px; 
@@ -44,8 +52,8 @@
 .text-content p { 
     margin-bottom: 15px; 
     font-size: 1.1rem; 
-      font-family: var(--font-body);
-    line-height: 1.7; /* Увеличим межстрочный интервал для лучшей читаемости */
+    font-family: var(--font-body);
+    line-height: 1.7;
 }
 .features { 
     list-style-type: none; 
@@ -55,7 +63,7 @@
     position: relative; 
     padding-left: 25px; 
     margin-bottom: 10px; 
-    font-size: 1rem; 
+    font-size: 1.1rem; 
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -68,12 +76,21 @@
     font-weight: bold; 
 }
 
-/* 🔹 Галерея - ИСПРАВЛЕННЫЙ КОД */
-.gallery { flex: 1; }
+/* 🔹 Галерея */
+
+/*.gallery, .description {
+    margin-top: 10px;
+}*/
+
+.gallery { 
+    flex: 1; 
+   /* padding: 10px;*/
+    box-sizing: border-box;
+}
 .gallery-grid { 
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 15px; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
 }
 .gallery-grid a { 
     display: block;
@@ -81,11 +98,11 @@
     border-radius: var(--border-radius);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    position: relative;
 }
 /* Затемнение и текст поверх изображения при наведении */
 .gallery-grid a::after {
-    content: attr(data-caption); /* Берём текст из data-атрибута */
+    content: attr(data-caption);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -110,9 +127,9 @@
 }
 .gallery-grid img {
     width: 100%;
-    height: 180px; /* 🔹 Немного увеличиваем высоту */
+    height: 180px;
     object-fit: cover;
-    transition: transform 0.6s ease; /* 🔹 Увеличиваем длительность анимации */
+    transition: transform 0.6s ease;
     display: block;
 }
 .gallery-grid a:hover img {
@@ -121,17 +138,36 @@
 
 /* 🔹 Кнопки */
 .btn { 
-    display: inline-block; 
-    padding: 10px 15px; 
-    border-radius: 6px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 20px;
+    border-radius: 8px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
     background: var(--primary-color); 
-    color: white; 
-    text-decoration: none; 
-    transition: transform 0.2s, background 0.3s; 
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: all 0.3s ease;
 }
 .btn:hover { 
     background: var(--secondary-color); 
     transform: scale(1.08); 
+}
+
+/* Кнопка ПОДРОБНЕЕ */
+.btn-container {
+    text-align: right;
+    flex-shrink: 0;
 }
 
 /* Кнопка "Наверх" */
@@ -146,7 +182,7 @@
     background-color: var(--primary-color);
     color: white;
     cursor: pointer;
-    padding: 15px; /* Общий отступ */
+    padding: 15px;
     border-radius: 50%;
     font-size: 1.2rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -155,20 +191,17 @@
     align-items: center;
     justify-content: center;
 }
-
-/* Стили для SVG внутри кнопки */
 #scrollToTop svg {
-  width: 24px; /* Размер иконки */
-  height: 24px;
-  transition: transform 0.3s ease; /* Анимация для иконки */
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
 }
-
 #scrollToTop:hover svg {
-  transform: translateY(-3px); /* Иконка немного подпрыгивает вверх при наведении */
+    transform: translateY(-3px);
 }
 #scrollToTop:hover {
     background-color: var(--secondary-color);
-    transform: scale(1.08); /* Легкое увеличение всей кнопки */
+    transform: scale(1.08);
 }
 
 /* Стили для кнопок мессенджеров */
@@ -178,7 +211,6 @@
     align-items: center;
     margin-left: auto;
 }
-
 .msg-btn {
     display: inline-flex;
     align-items: center;
@@ -191,160 +223,78 @@
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     position: relative;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Увеличиваем тень для контраста */
-    border: 2px solid transparent; /* Добавляем границу */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border: 2px solid transparent;
 }
-
-/* Цвета кнопок с более насыщенными оттенками */
 .whatsapp-btn {
     background-color: #25D366;
     color: white;
-    border-color: #1ea952; /* Темно-зеленая граница */
+    border-color: #1ea952;
 }
-
 .telegram-btn {
     background-color: #0088cc;
     color: white;
-    border-color: #006ba1; /* Темно-синяя граница */
+    border-color: #006ba1;
 }
 
-/* Эффект пульсации с белой подсветкой */
+/* Анимации пульсации */
 @keyframes pulse-whatsapp {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6), 
-                   0 0 0 0 rgba(255, 255, 255, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.8),
-                   0 0 0 6px rgba(255, 255, 255, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6),
-                   0 0 0 0 rgba(255, 255, 255, 0.4);
-    }
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6), 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.8), 0 0 0 6px rgba(255, 255, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6), 0 0 0 0 rgba(255, 255, 255, 0.4); }
 }
-
 @keyframes pulse-telegram {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(0, 136, 204, 0.6),
-                   0 0 0 0 rgba(255, 255, 255, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 136, 204, 0.8),
-                   0 0 0 6px rgba(255, 255, 255, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(0, 136, 204, 0.6),
-                   0 0 0 0 rgba(255, 255, 255, 0.4);
-    }
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 136, 204, 0.6), 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 136, 204, 0.8), 0 0 0 6px rgba(255, 255, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 136, 204, 0.6), 0 0 0 0 rgba(255, 255, 255, 0.4); }
 }
+.whatsapp-btn { animation: pulse-whatsapp 2s ease-in-out infinite; }
+.telegram-btn { animation: pulse-telegram 2s ease-in-out infinite; }
 
-/* Применяем пульсацию */
-.whatsapp-btn {
-    animation: pulse-whatsapp 2s ease-in-out infinite;
-}
-
-.telegram-btn {
-    animation: pulse-telegram 2s ease-in-out infinite;
-}
-
-/* Эффекты при наведении - делаем еще ярче */
 .msg-btn:hover {
     transform: scale(1.1);
     animation: none;
-    filter: brightness(1.1); /* Увеличиваем яркость */
+    filter: brightness(1.1);
 }
-
 .whatsapp-btn:hover {
     background-color: #20c45a;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7),
-               0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7), 0 0 15px rgba(255, 255, 255, 0.5);
 }
-
 .telegram-btn:hover {
     background-color: #0077b3;
-    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.7),
-               0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.7), 0 0 15px rgba(255, 255, 255, 0.5);
 }
-
-/* Активное состояние */
 .msg-btn:active {
     transform: scale(0.95);
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
-
-/* Добавляем белый текст с тенью для лучшей читаемости */
 .msg-btn {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-
-/* 🔹 Адаптивность */
-@media (max-width: 768px) { 
-    .block-content { flex-direction: column; } 
-    .text-content { padding-right: 0; margin-bottom: 20px; } 
-    .header-content { flex-direction: column; text-align: center; } 
-    .contacts { margin-top: 10px; } 
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); } 
-    
-}
-@media (max-width: 480px) { 
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); } 
-    .block-title { font-size: 1.4rem; } 
+/* 🔹 Описание экскурсии */
+.description {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    font-family: var(--font-body);
+    line-height: 1.7;
 }
 
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    .messenger-buttons {
-        gap: 10px;
-        margin-left: 0;
-        justify-content: center;
-        margin-top: 15px;
-        flex-wrap: wrap;
-    }
-    
-    .msg-btn {
-        padding: 12px 18px;
-        font-size: 0.95rem;
-        min-width: 130px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.4); /* Усиливаем тень на мобильных */
-    }
-    
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
+.description h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
-@media (max-width: 480px) {
-    .messenger-buttons {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-    
-    .msg-btn {
-        width: 100%;
-        max-width: 220px;
-        padding: 14px 20px;
-        font-size: 1rem;
-    }
-}
-
-/* Добавляем контрастный контейнер если нужно */
-.messenger-buttons {
-    padding: 8px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1); /* Легкий белый фон для контраста */
-    backdrop-filter: blur(5px); /* Размытие фона */
+.description p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
 }

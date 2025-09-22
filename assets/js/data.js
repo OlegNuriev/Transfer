@@ -1,7 +1,7 @@
 const sectionsData = [
   {
     title: "Экскурсии по Сочи",
-    text: [
+      text: [
       "Уникальные экскурсии по самым красивым местам Сочи.", 
       "Посетите Олимпийский парк, Красную Поляну, водопады, Дендрарий и многие другие достопримечательности. Мы предлагаем как групповые, так и индивидуальные туры..."
     ],
@@ -11,16 +11,14 @@ const sectionsData = [
       "Оптимальный маршрут",
       "Не нужно ждать группу",
       "Фотосессии в красивых местах",
-      "Стоимость от 4000 рублей."
-    ],
+      ],
     images: [
-      { src: "assets/images/sochi/ОлимпПарк.jpg", caption: "Олимпийский парк" },
-      { src: "assets/images/sochi/Mountains7.jpg", caption: "Красная Поляна" },
+      { src: "assets/images/sochi/fontan.png", caption: "Олимпийский парк" },
+      { src: "assets/images/sochi/snow1.jpg", caption: "Красная Поляна" },
       { src: "assets/images/sochi/Морпорт.jpg", caption: "Морской порт" },
       { src: "assets/images/sochi/Sea.jpg", caption: "Море Закат" },
-      { src: "assets/images/sochi/ОлимпПаркФ.jpg", caption: "Фонтан Олимпийский Парк" },
-      { src: "assets/images/sochi/Waterfall1.jpg", caption: "Водопад Змейка" },
-    ]
+      ],
+    link: "sochi.html"   
   },
   {
     title: "Туры по Абхазии оз. Рица",
@@ -31,19 +29,17 @@ const sectionsData = [
     features: [
       "Личный транспорт с кондиционером",
       "Просторный салон",
-      "Дегустации абхазских вин и чачи",
+      "Дегустации абхазских вин и чачи по желанию",
       "Остановки в красивых локациях",
       "Возможность избежать туристических групп",
-      "Стоимость от 8500 рублей"
-    ],
+      ],
     images: [
       { src: "assets/images/abh/Riza3.jpg", caption: "Озеро Рица" },
       { src: "assets/images/abh/ГолубоеОзеро.jpg", caption: "Голубое Озеро" },
       { src: "assets/images/abh/Gagra1.jpg", caption: "Гагра" },
       { src: "assets/images/abh/Riza4.jpg", caption: "Озеро Рица" },
-      { src: "assets/images/abh/White Rocks5.jpg", caption: "Белые скалы" },
-      { src: "assets/images/abh/River1.jpg", caption: "Ущелье" }
-    ]
+   ],
+   link: "riza.html" 
   },
 {
     title: "Туры по Абхазии Новый Афон",
@@ -54,38 +50,35 @@ const sectionsData = [
     features: [
       "Свободное время для прогулок и фотографий",
       "Индивидуальный маршрут без ожидания группы",
-      "Посещение ключевых достопримечательностей: монастырь, пещера, крепость",
+      "Посещение ключевых достопримечательностей",
       "Поездка без суеты: только вы и красота Абхазии",
       "Возможность выбора маршрута «на ходу»",
-      "Стоимость от 8500 рублей"
-    ],
+      ],
     images: [
       { src: "assets/images/abh/Afon.jpg", caption: "Водопад в Новом Афоне" },
       { src: "assets/images/abh/НовАфон.jpg", caption: "Новоафонский монастырь" },
       { src: "assets/images/abh/peshchera.jpg", caption: "Новоафонская Пещера" },
       { src: "assets/images/abh/Гагра.jpg", caption: "Гагра" },
-      { src: "assets/images/abh/Afon3.jpg", caption: "Железнодорожная станция" },
-      { src: "assets/images/abh/krepost.jpg", caption: "Анакопийская Крепость" }
-    ]
+    ],
+    link: "afon.html" 
   },
   {
     title: "Трансфер",
     text: [
-      "Так же предлагаем транфер",
-      "Из Аэропорта в Сочи/Красную Поляну или любой необходимый маршрут"
+      "Так же предлагаем транфер...",
+      "Из Аэропорта в Сочи/Красную Поляну или любой необходимый маршрут."
     ],
     features: [
       "Из Аэропорта в Сочи/Красную Поляну, Абхазию",
       "В Аэропорт из Сочи/Красной Поляны, Абхазии",
       "Заблаговременный выезд",
       "Прибытие в Аэропорт без опозданий",
-      "Стоимость от 1200 рублей"
-    ],
+     ],
     images: [
       { src: "assets/images/more/avto.jpg", caption: "Toyota Tank" },
       { src: "assets/images/more/avto2.jpg", caption: "Toyota Tank салон" },
-      { src: "assets/images/more/avto1.jpg", caption: "Toyota Tank" }
-            
+      { src: "assets/images/more/avto1.jpg", caption: "Toyota Tank" },
+      { src: "assets/images/more/Toyota Tank задний ряд.png", caption: "Toyota Tank салон" }
     ]
-  }
+    }
 ];

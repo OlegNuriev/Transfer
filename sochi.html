@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экскурсии по Сочи – Подробности</title>
+
+  <!-- Подключаем стили -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/components-mobile.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/more/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/more/favicon-16.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+
+  <!-- 🔹 Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🔹 Хедер -->
+  <header class="fixed-header">
+    <div class="header-content">
+      <h1>Экскурсии по Сочи</h1>
+      <div class="messenger-buttons">
+        <a href="https://wa.me/79384188234" target="_blank" class="msg-btn whatsapp-btn">WhatsApp</a>
+        <a href="https://t.me/OLEG_N_OLEG" target="_blank" class="msg-btn telegram-btn">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🔹 Основной контент -->
+  <main class="main-content sochi-page">
+    <section class="content-block.visible">
+      <!-- Заголовок -->
+      <h2 class="block-title">Подробности маршрута</h2>
+
+      <!-- Галерея -->
+      <div class="gallery">
+        <div class="gallery-grid">
+          <a href="assets/images/sochi/ОлимпПарк.jpg" data-fancybox="sochi" data-caption="Олимпийский парк">
+            <img src="assets/images/sochi/ОлимпПарк.jpg" alt="Олимпийский парк">
+          </a>
+          <a href="assets/images/sochi/ПастьДракона.jpg" data-fancybox="sochi" data-caption="Пасть Дракона">
+            <img src="assets/images/sochi/ПастьДракона.jpg" alt="Пасть Дракона">
+          </a>
+          <a href="assets/images/sochi/Морпорт.jpg" data-fancybox="sochi" data-caption="Морской порт">
+            <img src="assets/images/sochi/Морпорт.jpg" alt="Морской порт">
+          </a>
+          <a href="assets/images/sochi/snow.jpg" data-fancybox="sochi" data-caption="Закат у моря">
+            <img src="assets/images/sochi/snow.jpg" alt="Закат у моря">
+          </a>
+          <a href="assets/images/sochi/Waterfall1.jpg" data-fancybox="sochi" data-caption="Водопад Змейка">
+            <img src="assets/images/sochi/Waterfall1.jpg" alt="Водопад Змейка">
+          </a>
+          <a href="assets/images/sochi/РозаХутор.jpg" data-fancybox="sochi" data-caption="Роза Хутор">
+            <img src="assets/images/sochi/РозаХутор.jpg" alt="Роза Хутор">
+          </a>
+        </div>
+      </div>
+
+      <!-- Описание -->
+      <div class="description">
+        <h3>Описание экскурсии</h3>
+        <p>Приглашаем вас в увлекательное путешествие по Сочи! 
+        Вы увидите Олимпийский парк, Красную Поляну, Дендрарий, живописные водопады и множество других достопримечательностей.</p>
+
+        <p>Маршрут составляется индивидуально, по согласованию возможно внесение изменений в маршрут на ходу.
+        Мы обеспечим комфортный транспорт, фотосессии в лучших локациях и незабываемую атмосферу отдыха.</p>
+
+        <p><strong>Стоимость: от 4000 рублей(1-4 человека).</strong></p>
+        <p>Канатная дорога, Дендрарий и посещение водопада "Пасть Дракона" оплачивается отдельно(по желанию).</p>
+      </div>
+
+      <!-- Кнопка -->
+      <div class="btn-container">
+        <a href="index.html" class="btn">← Назад на главную</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔹 Футер -->
+  <footer class="footer">
+    <p>© 2025 Экскурсии по Сочи и Абхазии. Все права защищены.</p>
+  </footer>
+
+  <!-- 🔹 Скрипты -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+  Fancybox.bind("[data-fancybox]", {
+    Thumbs: false,
+    Toolbar: {
+      display: {
+        left: ["infobar"],
+        middle: ["zoomIn", "zoomOut", "toggle1to1"],
+        right: ["slideshow", "thumbs", "close"],
+      },
+    },
+    preload: 1,
+    wheel: "slide",
+    transition: "slide",
+  });
+</script>
+</body>
+</html>
+
+

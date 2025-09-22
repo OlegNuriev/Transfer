@@ -1,1 +1,55 @@
-/* 🔹 Стили под конкретные страницы (если будут) */
+.sochi-page {
+  display: block; 
+  padding-top: 100px; 
+}
+.sochi-page .block-title {
+  margin-top: 10px; 
+  border-radius: 10px;
+}
+
+.sochi-page .gallery,
+.sochi-page .description {
+    margin-top: 20px;   
+    margin-bottom: 20px; 
+}
+
+.sochi-page .gallery-grid img {
+    width: 100%;
+    height: 180px;      
+    object-fit: cover;  
+    display: block;
+}
+
+
+/* 🔹 Адаптив под мобильные устройства */
+@media (max-width: 768px) {
+    .sochi-page .gallery,
+    .sochi-page .description {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 0 10px; 
+        
+    }
+    .sochi-page {
+        margin-top: 80px; 
+  }
+    .sochi-page .description p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .sochi-page .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+  .sochi-page {
+    margin-top: 70px; 
+  }
+  .sochi-page .gallery-grid img {
+    height: 150px;
+  }
+}
