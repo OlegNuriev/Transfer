@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/images/more/favicon-16.png
+Disallow: /assets/images/more/favicon-32.png
+
+# Разрешаем индексацию главной страницы и основных страниц
+Allow: /index.html
+Allow: /sochi.html
+
+# Указываем карту сайта (создать sitemap.xml в корне)
+Sitemap: https://tourtransfer.ru/sitemap.xml

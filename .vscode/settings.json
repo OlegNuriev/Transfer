@@ -1,5 +1,18 @@
 {
-    "git.ignoreLimitWarning": true,
-    "path-intellisense.extensionOnImport": true,
-    "path-intellisense.showHiddenFiles": true
+  // Используем кастомный форматтер для Java (Eclipse XML)
+  "java.format.settings.url": "${workspaceFolder}/.vscode/java-formatter.xml",
+
+  // Можно дополнительно указать профиль (если в xml несколько профилей)
+  // "java.format.settings.profile": "MyProfileName",
+
+  // Автоформат при сохранении
+  "editor.formatOnSave": true,
+
+  // Включить автоимпорт для Java
+  "java.completion.importOrder": [
+    "java",
+    "javax",
+    "org",
+    "com"
+  ]
 }
